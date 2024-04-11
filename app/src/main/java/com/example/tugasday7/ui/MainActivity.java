@@ -76,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-
-
             public void onFailure(@NotNull Call<RestaurantResponse> call, @NotNull Throwable t) {
                 showLoading(false);
                 Log.e(TAG, "onFailure: " + t.getMessage());
@@ -113,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
         showLoading(true);
         Call<PostReviewResponse> client = ApiConfig.getApiService().postReview(RESTAURANT_ID,"Dicoding", review);
         client.enqueue(new Callback<PostReviewResponse>(){
-
             @Override
             public void onResponse(@NotNull Call<PostReviewResponse> call, @NotNull Response<PostReviewResponse> response) {
                 showLoading(false);
@@ -127,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
-
             @Override
             public void onFailure(@NotNull Call<PostReviewResponse> call, @NotNull Throwable t) {
                 showLoading(false);
