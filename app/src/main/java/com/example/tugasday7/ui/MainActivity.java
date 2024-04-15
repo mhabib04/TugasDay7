@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void postReview(String review) {
         showLoading(true);
-        Call<PostReviewResponse> client = ApiConfig.getApiService().postReview(RESTAURANT_ID,"Dicoding", review);
+        Call<PostReviewResponse> client = ApiConfig.getApiService().postReview(RESTAURANT_ID,"Habib", review);
         client.enqueue(new Callback<PostReviewResponse>(){
             @Override
             public void onResponse(@NotNull Call<PostReviewResponse> call, @NotNull Response<PostReviewResponse> response) {
@@ -132,4 +132,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-
